@@ -1,0 +1,885 @@
+@charset "UTF-8";
+
+/* CSS Information
+---------------------------------------------------------------
+Site URL:https://www.hopebearinc.com
+File name:common.css
+Summary:reset styles
+Created:2022-05-01
+--------------------------------------------------------------- */
+
+@media screen and (min-width: 1101px) {
+
+/* Link */
+/* ------------------------------------------------------------ */
+
+a:link,
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover,
+a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+img,
+a {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.alpha:hover {
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+/* Font */
+/* ------------------------------------------------------------ */
+
+em {
+	font-style: normal;
+}
+
+sup {
+	font-size: 66%;
+	vertical-align: top;
+}
+
+sub {
+	font-size: 66%;
+	vertical-align: baseline;
+}
+
+/* インデント1文字分 */
+/* ------------------------------------------------------------ */
+
+.indent {
+	text-indent: -1em;
+	margin-left: 1em;
+}
+
+/* Align */
+/* ------------------------------------------------------------ */
+
+.a_left {
+	text-align: left !important;
+}
+
+.a_center {
+	text-align: center !important;
+}
+
+.a_right {
+	text-align: right !important;
+}
+
+/* Float */
+/* ------------------------------------------------------------ */
+
+.f_left {
+	float: left;
+}
+
+.f_right {
+	float: right;
+}
+
+/* Clear */
+/* ------------------------------------------------------------ */
+
+.clfx::after {
+	content: '';
+	height: 0;
+	clear: both;
+	display: block;
+	visibility: hidden;
+}
+
+/* HR */
+/* ------------------------------------------------------------ */
+
+hr {
+	height: 1px;
+	margin: 60px 0;
+	padding: 0;
+	display: block;
+	border: 0;
+	border-top: 1px #e6e6e6 solid;
+}
+
+/* Center合わせ */
+/* ------------------------------------------------------------ */
+
+.c_mgn {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* pc_mode / sp_mode */
+/* ------------------------------------------------------------ */
+
+.pc_mode {
+	display: inherit !important;
+}
+
+.sp_mode {
+	display: none !important;
+}
+
+/* Header */
+/* ------------------------------------------------------------ */
+
+header {
+	position: relative;
+	z-index: 2;
+}
+
+header .inner {
+	background: rgba(255, 255, 255, 1);
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	-webkit-box-shadow: 0 0 5px 1px rgb(0 0 0 / 6%);
+    box-shadow: 0 0 5px 1px rgb(0 0 0 / 6%);
+}
+
+header .inner .header_area {
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header .inner .header_area h1 {
+	width: 240px;
+	height: auto;
+	margin-left: 100px;
+	/*
+	display: block;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+	*/
+}
+
+/* Global menu */
+/* ------------------------------------------------------------ */
+
+header #global_nav {
+}
+
+header #global_nav ul {
+	margin-right: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+header #global_nav ul li {
+	margin-left: 30px;
+}
+
+header #global_nav ul li a {
+	white-space: nowrap;
+	display: block;
+}
+
+header #global_nav ul li a span {
+	font-weight: 700;
+	position: relative;
+}
+
+header #global_nav ul li a span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+}
+
+header #global_nav ul li a:hover span::after {
+	background: #000;
+	bottom: -3px;
+}
+
+header #global_nav ul li a.active span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #000;
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+}
+
+/* Header fixed */
+/* ------------------------------------------------------------ */
+
+header .inner.fixed {
+	background: rgba(255, 255, 255, 1) !important;
+}
+
+/* Main */
+/* ------------------------------------------------------------ */
+
+main {
+	padding-top: 100px;
+	overflow: hidden;
+}
+
+main > section:not(#mainvisual) {
+	padding: 60px 0;
+}
+
+main > section .inner {
+	width: 1080px;
+	margin: 0 auto;
+}
+
+main > section p.comment {
+	line-height: 1.8;
+}
+
+a[href^="tel:"] {
+	color: #000;
+	pointer-events: none;
+	cursor: text;
+	text-decoration: none;
+}
+
+/* title */
+/* ------------------------------------------------------------ */
+
+main:not(#index) section#title .inner {
+	background: #F7ED48;
+}
+
+main:not(#index) section#title .inner {
+	width: 100%;
+	height: 95px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+main:not(#index) section#title h2 {
+	text-align: center;
+	font-size: 60px;
+	font-weight: 900;
+	margin-top: -30px;
+}
+
+main:not(#index) section#title h2 span {
+	font-size: 20px;
+	display: block;
+	margin-top: 10px;
+}
+
+/* Breadcrumb */
+/* ------------------------------------------------------------ */
+
+ul.breadcrumbs {
+	width: 1080px;
+    margin: -30px auto 0;
+    display: flex;
+	flex-wrap: nowrap;
+}
+ul.breadcrumbs li {
+	position: relative;
+	padding-right: calc(16px + 8px);
+	margin-right: 8px;
+	white-space: nowrap;
+}
+ul.breadcrumbs li::after {
+	content: '›';
+	width: 1em;
+	height: 1em;
+	line-height: 1;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+ul.breadcrumbs li:last-child {
+	margin-right: 0;
+	padding-right: 0;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+ul.breadcrumbs  li:last-child::after {
+	content: normal;
+}
+
+/* Pagination */
+/* ------------------------------------------------------------ */
+
+ul.pagination {
+	padding: 0 0 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul.pagination li .page-numbers {
+	border-radius: 50%;
+	background: #F4F4F4;
+	color: #000;
+	font-size: 20px;
+	font-weight: 900;
+	width: 40px;
+	height: 40px;
+	margin: 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+ul.pagination li .page-numbers.current {
+	background: #000;
+	color: #fff;
+}
+
+ul.pagination li .page-numbers.dots {
+	background: none;
+}
+
+ul.pagination li .prev {
+	background: none;
+}
+
+ul.pagination li .prev img {
+    width: 12px;
+}
+
+ul.pagination li .next {
+	background: none;
+}
+
+ul.pagination li .next img {
+    width: 12px;
+}
+
+
+/* Table */
+/* ------------------------------------------------------------ */
+
+main section .dllist {
+}
+
+main section .dllist .dlbox {
+	/*border-bottom: 1px #3e3a3a solid;*/
+	width: 100%;
+    display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+/*
+main section .dllist .dlbox:nth-of-type(1) {
+	border-top: 1px #3e3a3a solid;
+}
+*/
+main section .dllist .dlbox .dtbox {
+	text-align: left;
+	padding: 20px 0;
+	display: block;
+	flex-shrink: 0;
+}
+
+main section .dllist .dlbox .ddbox {
+	text-align: left;
+	padding: 20px 0;
+	display: block;
+}
+
+main section .dllist .dlbox .wrap {
+	line-height: 1.8;
+}
+
+main section .dllist .dlbox .ddbox .wrap {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+main section .dllist .spacer {
+	width: 100%;
+}
+
+/* Form */
+/* ------------------------------------------------------------ */
+
+main section#form .must {
+	border-radius: 50%;
+	background: #000;
+	color: #fff;
+	font-size: 10px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main section#form .any {
+	border-radius: 50%;
+	background: #F4F4F4;
+	color: #000;
+	font-size: 10px;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main section#form span.error {
+	margin-top: 10px;
+}
+
+main section#form .radio span.error {
+	margin-top: 0;
+}
+
+main section#form .inner > form .dtbox .wrap span {
+	font-size: 14px;
+	line-height: 1;
+}
+
+main section#form span.mwform-zip-field {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+main section#form input[type="text"],
+main section#form input[type="tel"],
+main section#form input[type="email"],
+main section#form input[type="password"],
+main section#form input[type="date"],
+main section#form input[type="number"] {
+	/*border: 1px solid #c1c1c1;*/
+	border: none;
+	background: #F4F4F4;
+	font-size: 16px;
+	letter-spacing: 1px;
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+main section#form select {
+	/*border: 1px solid #c1c1c1;*/
+	border: none;
+	background: #F4F4F4;
+	font-size: 16px;
+	letter-spacing: 1px;
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	box-sizing: border-box;
+	-webkit-appearance: none;
+}
+
+main section#form textarea {
+	/*border: 1px solid #c1c1c1;*/
+	border: none;
+	background: #F4F4F4;
+	font-size: 16px;
+	letter-spacing: 1px;
+	width: 100%;
+	padding: 10px;
+	box-sizing: border-box;
+}
+
+main section#form input[type="file"] {
+	font-size: 16px;
+}
+
+main section#form input[type="text"].zip {
+	width: 30%;
+}
+
+main section#form select.prefecture {
+	width: 30%;
+	margin-bottom: 10px;
+}
+
+/*Custom Select*/
+main section#form div.select {
+	width: 100%;
+	position: relative;
+}
+main section#form div.select::after {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-width: 0 2px 2px 0;
+	border-color: #727171;
+	border-style: solid;
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	transform-origin: center;
+	transform: rotate(45deg);
+}
+
+/*Custom CheckBox*/
+main section#form .check label {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	cursor: pointer;
+}
+main section#form .check label input[type="checkbox"] {
+	position: absolute;
+	z-index: 0;
+	opacity: 0;
+}
+main section#form .check label .custom_check {
+	background: #FFF;
+	width: 20px;
+	height: 20px;
+	z-index: 1;
+	border: 1px solid #df4360;
+	border-radius: 3px;
+}
+main section#form .check label .custom_check::before {
+	content: "";
+	height: 2px;
+	width: 7px;
+	background: #FFF;
+	position: absolute;
+	transform: rotate(40deg);
+	top: 11px;
+	left: 5px;
+	display: none;
+}
+main section#form .check label .custom_check::after {
+	content: "";
+	height: 2px;
+	width: 10px;
+	background: #FFF;
+	position: absolute;
+	transform: rotate(-50deg);
+	top: 9px;
+	left: 9px;
+	display: none;
+}
+main section#form .check label input:checked + .custom_check,
+main section#form .check label input:checked ~ .custom_check {
+	background: #df4360;
+}
+main section#form .check label input:checked + .custom_check::before,
+main section#form .check label input:checked + .custom_check::after,
+main section#form .check label input:checked ~ .custom_check::before,
+main section#form .check label input:checked ~ .custom_check::after {
+	display: block;
+}
+main section#form .check label span {
+	line-height: 1;
+}
+main section#form .check label span a {
+	text-decoration: underline;
+}
+
+/*Custom radio button*/
+main section#form .radio {
+	position: relative;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+main section#form .radio input[type="radio"] {
+	position: absolute;
+	visibility: hidden;
+	width: auto;
+}
+main section#form .radio .mwform-radio-field-text {
+	line-height: 1;
+	margin-right: 20px;
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+main section#form .radio .mwform-radio-field-text::before {
+	position: relative;
+	left: 0;
+	top: 0;
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
+	background: #fff;
+	border: 1px solid #727171;
+	box-sizing: border-box;
+	border-radius: 50%;
+	vertical-align: middle;
+}
+main section#form .radio input[type="radio"]:checked + .mwform-radio-field-text::before {
+	border: 1px solid #df4360;
+}
+main section#form .radio input[type="radio"]:checked + .mwform-radio-field-text::after {
+	position: absolute;
+	left: 5px;
+	top: 5px;
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	background: #df4360;
+	border-radius: 50%;
+	box-sizing: border-box;
+	vertical-align: middle;
+}
+
+main section#form .mwform-zip-field {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+main section#form .mwform-zip-field input {
+	margin: 0 10px;
+}
+
+main section#form .btn_area {
+	margin: 60px auto 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main section#form .btn_submit {
+	background: #F7ED48;
+	color: #000;
+	font-size: 20px;
+	font-weight: 900;
+	letter-spacing: 0.2em;
+	margin-right: -0.2em;
+	width: 400px;
+	height: 80px;
+	display: block;
+	cursor: pointer;
+	border: none;
+}
+
+main section#form .btn_submit:hover {
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+main section#form .mw_wp_form_complete p {
+	text-align: left;
+	line-height: 1.8;
+	margin-top: 60px;
+}
+
+/* Footer */
+/* ------------------------------------------------------------ */
+
+footer {
+	background: #000;
+	color: #fff;
+	padding: 60px 0 40px;
+}
+
+footer .inner {
+    display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .inner > div {
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .inner > div > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+footer .inner > div > div h1 {
+	max-width: 300px;
+	margin-left: 100px;
+}
+
+footer .inner > div > div ul {
+	margin-left: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+footer .inner > div > div ul li {
+	width: 32px;
+}
+
+footer .inner > div > div ul li:nth-of-type(n+2) {
+	margin-left: 10px;
+}
+
+footer nav ul {
+	margin-right: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer nav ul li {
+	margin-left: 30px;
+}
+
+footer ul li a {
+	white-space: nowrap;
+	display: block;
+}
+
+footer ul li a span {
+	color: #fff;
+	font-weight: 700;
+	position: relative;
+}
+
+footer ul li a span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+}
+
+footer ul li a:hover span::after {
+	background: #fff;
+	bottom: -3px;
+}
+
+footer ul li a.active span::after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 1px;
+	background: #fff;
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+}
+
+footer .inner > ul:nth-of-type(1) {
+	width: 640px;
+	margin: 60px auto 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+footer .inner > ul:nth-of-type(2) {
+	width: 640px;
+	margin: 60px auto 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+footer .inner > ul:nth-of-type(2) li a span {
+	color: #fff;
+	font-weight: 400;
+	position: relative;
+}
+
+footer .inner p.copyright {
+	font-size: 12px;
+	margin: 40px auto 0;
+}
+
+/* fadein */
+/* ------------------------------------------------------------ */
+
+.fadein {
+	opacity: 0;
+	transform: translate(0, 40px);
+	transition: all 700ms;
+}
+
+.fadein.scrollin {
+	opacity: 1;
+	transform: translate(0, 0);
+}
+
+/* トップページに戻るボタン */
+/* ------------------------------------------------------------ */
+
+.pagetop {
+	border-radius: 60px;
+	width: 60px;
+	display: none;
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+}
+
+.pagetop a {
+	display: block;
+}
+
+.pagetop img {
+	width: 100%;
+	height: auto;
+}
+
+/* ----2503013 追加-------------------------------------------------------- */
+header #global_nav ul {
+	margin-right: 0px !important;
+}
+header #global_nav ul li.sns {
+}
+header #global_nav ul .sns-link {
+	display: flex;
+	column-gap: 10px;
+	margin-right: 100px !important;
+}
+	header #global_nav ul .sns-link li{
+
+	}
+		header #global_nav ul .sns-link img {
+			height: 40px !important;
+			width: auto !important;
+		}
+	
+}
+
+
+
